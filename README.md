@@ -17,3 +17,13 @@ If you found yourself using several `print()` and `io.read()` around the code wi
 There are few alternatives, but we'll start with the easiest one: a command-line debugger.
 
  1. [MobDebug](MobDebug/README.md) (command-line)
+
+
+## Designing Modules
+
+One of the major concerns of a new developer is how to write and design new modules for Torch, especially the `nn` package. Modules, based on their functionality, parameters and code, can be categorized as the following:
+
+* Modules that act as a function on the input and do not have any parameters to optimize
+* Modules that have parameters to be optimized and have been written in pure **Lua** 
+* Modules that have optimizataion parameters but have been written in C
+* Finaally, Modules that have parameters and use CUDA code for GPU acceleration. 
